@@ -1,0 +1,27 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/bottom_sheet"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    app:behavior_peekHeight="80dp"
+    app:behavior_hideable="true"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+        主要就是该属性的引入,变成底部动作条
+    app:behavior_peekHeight="80dp" //定义底部动作条的可见高度,这里正好是第一个textview的高度
+    app:behavior_hideable //定义是否可以下滑隐藏底部动作条
+    -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:text="Item1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item2"/>
+
+</LinearLayout>
