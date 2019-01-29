@@ -1,9 +1,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="23dp"
+        app:contentPadding="20dp">
+        <!--app:cardBackgroundColor：设置背景色。-->
+        <!--app:cardCornerRadius：设置角的弧度，MD设计要求统一为2dp，但是2dp感官上不太明显。-->
+        <!--app:contentPadding：内容padding。-->
+        <!--app:cardElevation：设置z轴高度-->
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:counterOverflowTextAppearance="@style/counterOverFlowAppearance"
+            app:counterTextAppearance="@style/counterAppearance"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/errorAppearance">
+            <!--app:counterEnabled="true"  //设置是否显示字数统计-->
+            <!--app:counterMaxLength="15"      //设置字数统计的最大值-->
+            <!--app:counterOverflowTextAppearance="@style/counterOverFlowAppearance"   //设置超出最大值后的样式-->
+            <!--app:counterTextAppearance="@style/counterAppearance"                   //设置字数统计的样式-->
+            <!--app:errorEnabled="true" //错误提示及样式-->
+            <!--app:errorTextAppearance="@style/errorAppearance"-->
+            <!--editText.setError("超出字数限制");-->
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="TextInputLayout演示"
+                android:text="CardView演示" />
+            <Button
+                android:id="@+id/btnOpenBottom"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打开底部工具条/侧划菜单"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.v7.widget.CardView>
 </LinearLayout>

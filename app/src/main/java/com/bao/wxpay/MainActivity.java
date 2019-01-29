@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         drawerLayout = findViewById(R.id.id_drawerlayout);
-        findViewById(R.id.btn_login).setOnClickListener(btnOnClick);
         initBottomSheetBehavior();
+        ((EditText)findViewById(R.id.editText1)).setError("超出字符限制");
+        findViewById(R.id.btnOpenBottom).setOnClickListener(btnOnClick);
     }
 
     private void initBottomSheetBehavior() {

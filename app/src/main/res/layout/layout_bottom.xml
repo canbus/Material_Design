@@ -18,10 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:text="Item1"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Item2"/>
+        android:textSize="24dp"
+        android:text="底部工具条演示，可以下划隐藏"/>
+
 
 </LinearLayout>
